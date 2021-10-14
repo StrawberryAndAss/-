@@ -130,7 +130,7 @@
             // _btn_logon
             // 
             this._btn_logon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this._btn_logon.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this._btn_logon.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this._btn_logon.Location = new System.Drawing.Point(349, 266);
             this._btn_logon.Name = "_btn_logon";
             this._btn_logon.Radius = 15;
@@ -167,6 +167,7 @@
             this.Controls.Add(this.Depiction_2);
             this.Controls.Add(this.Depiction_1);
             this.Controls.Add(this._txt_username);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Logon";
             this.Text = "Intelligent Task Time By Straberry Ass";

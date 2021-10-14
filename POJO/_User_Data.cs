@@ -18,6 +18,7 @@ namespace 智能工时系统.POJO
 
         [DataMember]
         public string Password { get; set; }
+
         [DataMember]
         public string Redirect { get; set; }
   

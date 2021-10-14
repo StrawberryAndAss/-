@@ -24,6 +24,8 @@ namespace 智能工时系统
             softUserInfo.SetValue("username", "");
             softUserInfo.SetValue("userPassword", "");
             softUserInfo.SetValue("checkBox", "");
+            softUserInfo.SetValue("jsonData", "");
+            softUserInfo.SetValue("jsonCallButton", "");
         }
 
         /// <summary>
@@ -37,7 +39,7 @@ namespace 智能工时系统
             if (softwareXXX == null)
             {
                 buildreg();
-                softwareXXX = key.OpenSubKey("UserLoginInfo");
+                softwareXXX = key.OpenSubKey("IntelligentTaskTime1733");
             }
             if (checkBox)
             {

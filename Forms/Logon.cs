@@ -66,7 +66,7 @@ namespace 智能工时系统
                     Username = _logon_username,
                     Password = _logon_password
                 };
-                CookieContainer _logon_return_cookie_ = Post.PostData(user_Data.ToString(), POST_LOGON_URL,cookie);
+                CookieContainer _logon_return_cookie_ = _Token_Post.PostData(user_Data.ToString(), POST_LOGON_URL,cookie);
                 cookie = _logon_return_cookie_;
             }
 
@@ -80,6 +80,11 @@ namespace 智能工时系统
                 UIMessageTip.ShowOk("您已成功登录", 2000);
                 //写入账号密码 保存至本地
                 RememberMeManager.WriteIn(_logon_username, _logon_password, checkBox);
+
+                //将登录成功的Token传送至主页面
+                _User_Token.Token = cookie;
+
+                //显示主页面
                 _Main_Window main_Window = new _Main_Window();
                 main_Window.Show();
                 this.Hide();
